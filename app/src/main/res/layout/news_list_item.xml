@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="8dp"
+    android:id="@+id/expandableCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/newsImageIV"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/newsImageIV"
+            app:layout_constraintTop_toBottomOf="@+id/newsImageIV"
+            tools:text="News Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsPublishedTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/newsTitleTV"
+            app:layout_constraintTop_toBottomOf="@+id/newsTitleTV"
+            tools:text="8 March, 1999" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsByTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/by"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintStart_toStartOf="@+id/newsPublishedTV"
+            app:layout_constraintTop_toBottomOf="@+id/newsPublishedTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsAuthorTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/newsByTV"
+            app:layout_constraintTop_toTopOf="@+id/newsByTV"
+            tools:text="Author" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsUrlTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Url"
+            android:textColor="#0000EE"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintStart_toStartOf="@+id/newsByTV"
+            app:layout_constraintTop_toBottomOf="@+id/newsByTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
